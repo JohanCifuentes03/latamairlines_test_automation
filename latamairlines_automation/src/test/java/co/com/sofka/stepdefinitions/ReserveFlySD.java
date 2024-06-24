@@ -13,6 +13,7 @@ import java.util.List;
 import static co.com.sofka.UrlConstant.MAIN_PAGE_URL;
 import static co.com.sofka.tasks.OpenMainPage.openMainPage;
 import static co.com.sofka.tasks.SelectFlightDetails.selectFlightDetails;
+import static co.com.sofka.tasks.SelectPlaces.selectPlaces;
 
 
 public class ReserveFlySD extends WebSetup {
@@ -30,6 +31,7 @@ public class ReserveFlySD extends WebSetup {
     public void theUserReservesAFlightWithFollowingDetails(List<FlightDetails> flightDetailsList) {
         FlightDetails flightDetails = flightDetailsList.get(0);
         actor.attemptsTo(
+                selectPlaces().withOrigin(flightDetails.getFrom()).andDestination(flightDetails.getTo()),
                 selectFlightDetails().withDetails(flightDetails)
         );
     }

@@ -152,7 +152,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 22-06-2024 14:25</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 23-06-2024 12:50</span>
     <br style="clear:left"/>
 </div>
 
@@ -196,9 +196,9 @@ So that I can travel and enjoy
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Successfully reserve a flight
+                                <span class="error-color">Successfully reserve a flight
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -219,56 +219,69 @@ So that I can travel and enjoy
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Null pointer exception: Cannot invoke 'java.security.SecureRandom.nextInt(int)' because 'co.com.sofka.utils.RandomUtilities.secureRandom' is null</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.NullPointerException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.sofka.tasks.SelectFlightDetails.performAs(SelectFlightDetails.java:32)<br />net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:523)<br />net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:503)<br />net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:475)<br />net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:217)<br />net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:204)<br />net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:92)<br />co.com.sofka.stepdefinitions.ReserveFlySD.theUserReservesAFlightWithFollowingDetails(ReserveFlySD.java:32)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:332)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:53)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource15898099406376216716.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="3c688e3a4adeea29600a2867781804c57bb37ea0ebc00942a43af34050b4756d.png" title=" 1: Successfully reserve a flight ({webBrowser=edge, from=Medellin, to=Bogota, daysAhead=15, nAdults=3, nChildren=2})" width="0"/>
                 <img src="3c688e3a4adeea29600a2867781804c57bb37ea0ebc00942a43af34050b4756d.png" title=" Given the user is on the LATAM Airlines platform using &quot;edge&quot;" width="0"/>
                 <img src="3c688e3a4adeea29600a2867781804c57bb37ea0ebc00942a43af34050b4756d.png" title=" Johan open main page" width="0"/>
                 <img src="3c688e3a4adeea29600a2867781804c57bb37ea0ebc00942a43af34050b4756d.png" title=" Johan opens the browser at https://www.latamairlines.com/" width="0"/>
-                <img src="80ad2a95f1047245fd373c3b4842e198fb5edeabe8c1a23923bd39bc3dcc3320.png" title=" Johan opens the browser at https://www.latamairlines.com/ (completed)" width="0"/>
-                <img src="80ad2a95f1047245fd373c3b4842e198fb5edeabe8c1a23923bd39bc3dcc3320.png" title=" Johan open main page (completed)" width="0"/>
-                <img src="e1f44232f3f1ec1102f2d939845af708aa2c2a0bb79b4c7f6621d65235a08e4e.png" title=" Given the user is on the LATAM Airlines platform using &quot;edge&quot; (completed)" width="0"/>
-                <img src="e1f44232f3f1ec1102f2d939845af708aa2c2a0bb79b4c7f6621d65235a08e4e.png" title=" When the user reserves a flight with following details
+                <img src="20198b6f14f4783be660f5be4053a89ecc3fb28d9fe79bfa601246825da8d781.png" title=" Johan opens the browser at https://www.latamairlines.com/ (completed)" width="0"/>
+                <img src="20198b6f14f4783be660f5be4053a89ecc3fb28d9fe79bfa601246825da8d781.png" title=" Johan open main page (completed)" width="0"/>
+                <img src="20198b6f14f4783be660f5be4053a89ecc3fb28d9fe79bfa601246825da8d781.png" title=" Given the user is on the LATAM Airlines platform using &quot;edge&quot; (completed)" width="0"/>
+                <img src="20198b6f14f4783be660f5be4053a89ecc3fb28d9fe79bfa601246825da8d781.png" title=" When the user reserves a flight with following details
 | from | to | daysAhead | nAdults | nChildren |
 | Medellin | Bogota | 15 | 3 | 2 |" width="0"/>
-                <img src="e1f44232f3f1ec1102f2d939845af708aa2c2a0bb79b4c7f6621d65235a08e4e.png" title=" Johan select flight details" width="0"/>
-                <img src="de5b08039fd7484da990a0aab9dc6fcda747924954dfd900f581da2ee0bebc67.png" title=" Johan enters 'Medellin' into the input origin" width="0"/>
-                <img src="aa8d99a518dab427a150469f095e4ce928f8c83b874772914b70df7c46906f57.png" title=" Johan enters 'Medellin' into the input origin (completed)" width="0"/>
-                <img src="aa8d99a518dab427a150469f095e4ce928f8c83b874772914b70df7c46906f57.png" title=" Johan clicks on the first suggestion" width="0"/>
-                <img src="25578641c2784d74d341badff69150a8477433bc47d024d1e01066e25d20fc30.png" title=" Johan clicks on the first suggestion (completed)" width="0"/>
-                <img src="25578641c2784d74d341badff69150a8477433bc47d024d1e01066e25d20fc30.png" title=" Johan enters 'Bogota' into the input destination" width="0"/>
-                <img src="7bf997e2cf88e31f37ae49d5266fbed9d3b6ba9685c54a3e25d2839d49d399d5.png" title=" Johan enters 'Bogota' into the input destination (completed)" width="0"/>
-                <img src="7bf997e2cf88e31f37ae49d5266fbed9d3b6ba9685c54a3e25d2839d49d399d5.png" title=" Johan clicks on the first suggestion" width="0"/>
-                <img src="ba3713fa329d75ed3ddd59948f9aabc8ef695b9133076198de9f379086f71db9.png" title=" Johan clicks on the first suggestion (completed)" width="0"/>
-                <img src="ba3713fa329d75ed3ddd59948f9aabc8ef695b9133076198de9f379086f71db9.png" title=" Johan clicks on the open calendar input button" width="0"/>
-                <img src="adc458e8c35acc46cc259b81ce69af24fc0be4a09ecf924535a5c2d4e279e20b.png" title=" Johan clicks on the open calendar input button (completed)" width="0"/>
-                <img src="a438d439985eeae91acafc04956f6e1762aea7bf1ff24ec6c6221dd394c74ce7.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="89211c146cdd5b43fe933b4b3abe70e005de99bdbbf66c042f5fb9d0ea7e6c68.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="43c42c4faca766def61a4bb408f04feed720ea1cf3030c6042dbb98fe14f4edd.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="e4f6d98fdb173544b7dfa2da2885c3c81214cbd4483b6d88b441db383c86f9ff.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="05b599351e03af8056fecffc70b8a3b4134ce199c23ac884246b027fa28e3d1a.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="835670db8729402e4f467de2ea16b2bad83d08283e98ff009b285bea23e7737c.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="27137e47c0b48809dcb56b2afa78cecc2a2f067228bf85d9c12c61b242e7c9a8.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="67f9677f0b7525080d539923085f31290e049e6a7597e0f307e54aa11489463b.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="b7ba41d74bf520988c7bdfb9c6d6cf4d3430dd03d3d7334f55a10eb0fb7cc38d.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="30728fc68f83f15bde7e88238c43f1a9a127d4e7be403625d7c37a1f98d8b4c0.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="42c3d616092961d4c50b10e13a2fed5c683e713f7a10fb2991e7b5a3cada44c1.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="ccf40e3259e00d6372a2cce8a1edc96f38bac40afe0e8d22cc2e2c95fe9dfbfc.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="5b85ed88e704e37632c128f0cd82c3e756fcb5fc96d9907ad26c46f7e76436bc.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="4ad88628dc1eed0868d03b3193f6b9ed6f53267c93269977328f33fdebc81b05.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="31c7377244686efe1e6b68db8549992a759cf4c681cd97c0eec6fe36c984b655.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="82e81a667ac6e069c72c5576a3d40b38dccb2826deda75aa312d1506c6f916c1.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="79bccc74b3aaab6f38c882fe5ddff34279cb699975c8dfc28efa178df27eb723.png" title=" Johan clicks on the advance month button" width="0"/>
-                <img src="adf80cb2abf20bae79db0afdd51a0ca77d7ea4216d6fb7bb5a8b61e7d3fc31b6.png" title=" Johan clicks on the advance month button (completed)" width="0"/>
-                <img src="adf80cb2abf20bae79db0afdd51a0ca77d7ea4216d6fb7bb5a8b61e7d3fc31b6.png" title=" Johan select flight details (completed)" width="0"/>
-                <img src="adf80cb2abf20bae79db0afdd51a0ca77d7ea4216d6fb7bb5a8b61e7d3fc31b6.png" title=" When the user reserves a flight with following details
-| from | to | daysAhead | nAdults | nChildren |
-| Medellin | Bogota | 15 | 3 | 2 | (completed)" width="0"/>
-                <img src="adf80cb2abf20bae79db0afdd51a0ca77d7ea4216d6fb7bb5a8b61e7d3fc31b6.png" title=" And confirms the preferences" width="0"/>
-                <img src="a20f2cca46aa2cf0b225b3e69b9c3fd50c5a16e701318ce5b67d7f2b943dad4e.png" title=" And confirms the preferences (completed)" width="0"/>
-                <img src="a20f2cca46aa2cf0b225b3e69b9c3fd50c5a16e701318ce5b67d7f2b943dad4e.png" title=" Then the user should see a confirmation message" width="0"/>
+                <img src="20198b6f14f4783be660f5be4053a89ecc3fb28d9fe79bfa601246825da8d781.png" title=" Johan select flight details" width="0"/>
+                <img src="20198b6f14f4783be660f5be4053a89ecc3fb28d9fe79bfa601246825da8d781.png" title=" Johan enters 'Medellin' into the input origin" width="0"/>
+                <img src="c41346110f1cf872c1e7a6bc1e96a87da77c4ab38f27818255a1a9c3022d36f1.png" title=" Johan enters 'Medellin' into the input origin (completed)" width="0"/>
+                <img src="c41346110f1cf872c1e7a6bc1e96a87da77c4ab38f27818255a1a9c3022d36f1.png" title=" Johan clicks on the first suggestion" width="0"/>
+                <img src="3971aae56bbe05c72c6ab1335bfc4d0b38e76695508b13d886c4af517cece5e8.png" title=" Johan clicks on the first suggestion (completed)" width="0"/>
+                <img src="3971aae56bbe05c72c6ab1335bfc4d0b38e76695508b13d886c4af517cece5e8.png" title=" Johan enters 'Bogota' into the input destination" width="0"/>
+                <img src="4cfec8350cb37dffa76140014eec5676e2e8f314ca8e24e61694a54b9663e602.png" title=" Johan enters 'Bogota' into the input destination (completed)" width="0"/>
+                <img src="4cfec8350cb37dffa76140014eec5676e2e8f314ca8e24e61694a54b9663e602.png" title=" Johan clicks on the first suggestion" width="0"/>
+                <img src="2e8b6febc0125963522b588036317f7e775d410f744483964bbe2569387c4c69.png" title=" Johan clicks on the first suggestion (completed)" width="0"/>
+                <img src="2e8b6febc0125963522b588036317f7e775d410f744483964bbe2569387c4c69.png" title=" Johan clicks on the open calendar input button" width="0"/>
+                <img src="dc47f6b7bddedba3c342920c476b638f1d50964a07e0d1968a9a0da4bfa7a2fe.png" title=" Johan clicks on the open calendar input button (completed)" width="0"/>
+                <img src="36f2f68e29f278211b8aa32d642d74bc73ecc0809a3fa6e2e10708af13a66756.png" title=" Johan clicks on Date in the calendar" width="0"/>
+                <img src="66a7d5a170c9885e7102ccc195dca3f674a52209336f5e017515303c6935ad48.png" title=" Johan clicks on Date in the calendar (completed)" width="0"/>
 
-                <img src="a20f2cca46aa2cf0b225b3e69b9c3fd50c5a16e701318ce5b67d7f2b943dad4e.png" title=" 1: Successfully reserve a flight ({webBrowser=edge, from=Medellin, to=Bogota, daysAhead=15, nAdults=3, nChildren=2}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+                <img src="66a7d5a170c9885e7102ccc195dca3f674a52209336f5e017515303c6935ad48.png" title=" Johan select flight details (completed): <span class='error-color'>ERROR</span>" width="0"/>
             </div>
         </div>
 

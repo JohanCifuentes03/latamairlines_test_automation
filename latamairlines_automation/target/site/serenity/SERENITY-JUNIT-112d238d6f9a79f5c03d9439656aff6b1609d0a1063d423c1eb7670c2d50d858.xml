@@ -1,1 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Reserve a flight" skipped="0" tests="1" time="11.06" timestamp="2024-06-22 02:25:53"><testcase name="Successfully reserve a flight"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Reserve a flight" skipped="0" tests="1" time="10.29" timestamp="2024-06-23 12:50:30"><testcase name="Successfully reserve a flight"><error message="Cannot invoke &quot;java.security.SecureRandom.nextInt(int)&quot; because &quot;co.com.sofka.utils.RandomUtilities.secureRandom&quot; is null" type="java.lang.NullPointerException">Cannot invoke "java.security.SecureRandom.nextInt(int)" because "co.com.sofka.utils.RandomUtilities.secureRandom" is null</error><system-err>Cannot invoke "java.security.SecureRandom.nextInt(int)" because "co.com.sofka.utils.RandomUtilities.secureRandom" is null&#13;
+co.com.sofka.tasks.SelectFlightDetails.performAs(SelectFlightDetails.java:32)&#13;
+net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:523)&#13;
+net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:503)&#13;
+net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:475)&#13;
+net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:217)&#13;
+net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:204)&#13;
+net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:92)&#13;
+co.com.sofka.stepdefinitions.ReserveFlySD.theUserReservesAFlightWithFollowingDetails(ReserveFlySD.java:32)&#13;
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:56)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:84)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)&#13;
+io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)&#13;
+io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)&#13;
+io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:332)&#13;
+io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:53)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>
