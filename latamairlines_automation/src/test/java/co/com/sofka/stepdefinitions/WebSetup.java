@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 public class WebSetup {
     @Managed
-    protected static WebDriver webDriver;
+    public static WebDriver webDriver;
 
     public static final Actor actor = new Actor("Johan");
 
