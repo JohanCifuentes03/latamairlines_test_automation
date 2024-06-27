@@ -16,11 +16,8 @@ public class SwitchToNewWindow implements Task {
 
         String currHandle = driver.getWindowHandle();
         Set<String> allHandles = driver.getWindowHandles();
-        System.out.println(allHandles);
-
         for (String handle : allHandles) {
             if (!handle.contentEquals(currHandle)) {
-                driver.close();
                 driver.switchTo().window(handle);
                 break;
             }

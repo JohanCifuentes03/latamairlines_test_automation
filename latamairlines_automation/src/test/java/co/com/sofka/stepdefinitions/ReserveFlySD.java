@@ -18,11 +18,13 @@ import static co.com.sofka.tasks.SelectDates.selectDates;
 import static co.com.sofka.tasks.SelectFlightPreferences.selectFlightPreferences;
 import static co.com.sofka.tasks.SelectPassengers.selectPassengers;
 import static co.com.sofka.tasks.SelectPlaces.selectPlaces;
+import static co.com.sofka.tasks.SelectSeats.selectSeats;
 import static co.com.sofka.tasks.SwitchToNewWindow.changeWindow;
 import static co.com.sofka.utils.RandomUtilities.secureRandom;
 
 
 public class ReserveFlySD extends WebSetup {
+    private FlightDetails flightDetails;
 
     @Given("the user is on the LATAM Airlines platform using {string}")
     public void theUserIsOnTheLATAMAirlinesPlatformUsing(String webDriver) {
@@ -37,7 +39,7 @@ public class ReserveFlySD extends WebSetup {
     public void theUserReservesAFlightWithFollowingDetails(List<FlightDetails> flightDetailsList) {
         // In this context, people can reserve a fly from 0, 8 months of anticipation,
         // but back flight generally is 1 week after or less
-        FlightDetails flightDetails = flightDetailsList.get(0);
+        flightDetails = flightDetailsList.get(0);
         LocalDate flightDate = LocalDate.now()
                 .plusMonths(secureRandom.nextInt(0, 9) )
                 .plusDays(secureRandom.nextInt(1,30 ));
@@ -61,7 +63,8 @@ public class ReserveFlySD extends WebSetup {
                 changeWindow(),
                 selectFlightPreferences(), // outbound flight
                 selectFlightPreferences(), // back flight
-                continueToDataSeat()
+                continueToDataSeat(),
+                selectSeats().forNPassengers(flightDetails.getnAdults() + flightDetails.getnChildren())
         );
     }
 
