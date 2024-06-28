@@ -2,7 +2,6 @@ package co.com.sofka.stepdefinitions;
 
 
 import co.com.sofka.models.FlightDetails;
-import co.com.sofka.tasks.SelectFlightPreferences;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,7 +11,9 @@ import java.util.List;
 
 import static co.com.sofka.UrlConstant.MAIN_PAGE_URL;
 import static co.com.sofka.tasks.ConfirmSearch.confirmSearch;
+import static co.com.sofka.tasks.ConfirmSeats.confirmSeats;
 import static co.com.sofka.tasks.ContinueToDataSeat.continueToDataSeat;
+import static co.com.sofka.tasks.GoNextFlightSeats.goNextFlightSeats;
 import static co.com.sofka.tasks.OpenMainPage.openMainPage;
 import static co.com.sofka.tasks.SelectDates.selectDates;
 import static co.com.sofka.tasks.SelectFlightPreferences.selectFlightPreferences;
@@ -59,12 +60,16 @@ public class ReserveFlySD extends WebSetup {
 
     @When("confirms the preferences")
     public void confirmsThePreferences() {
+        int totalPassengers = flightDetails.getnAdults() + flightDetails.getnChildren();
         actor.attemptsTo(
                 changeWindow(),
                 selectFlightPreferences(), // outbound flight
                 selectFlightPreferences(), // back flight
                 continueToDataSeat(),
-                selectSeats().forNPassengers(flightDetails.getnAdults() + flightDetails.getnChildren())
+                selectSeats().forNPassengers(totalPassengers), // outbound flight
+                goNextFlightSeats(),
+                selectSeats().forNPassengers(totalPassengers), // back flight
+                confirmSeats()
         );
     }
 
