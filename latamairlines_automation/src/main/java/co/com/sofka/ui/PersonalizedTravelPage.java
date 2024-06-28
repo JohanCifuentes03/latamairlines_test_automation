@@ -22,9 +22,5 @@ public class PersonalizedTravelPage extends PageObject {
                     .locatedBy("#button-cart-confirm")
                     .waitingForNoMoreThan(Duration.ofSeconds(10));
 
-    // Dynamic because this would be for adult 1 passengerDetails-firstName-ADT_1 and so on
-    public static final String FIRST_NAME_ADULT_INPUT = "#passengerDetails-firstName-ADT_%s";
-    public static final String LAST_NAME_ADULT_INPUT = "#passengerDetails-firstName-ADT_%s";
-    public static final String DATE_BIRTH_ADULT_INPUT = "#passengerInfo-dateOfBirth-ADT_%s";
 
 }
